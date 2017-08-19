@@ -20,6 +20,7 @@ export default class CardList extends React.Component {
 
     onFormSubmit(e) {
       e.preventDefault();
+      debugger;
       this.setState({cardsText: [...this.state.cardsText, this.refs.myInput.value]});
 
       
@@ -32,11 +33,12 @@ export default class CardList extends React.Component {
         const card = [];
         for (let i=0; i<this.state.cardsText.length; i++) {
             let newCard = this.state.cardsText[i];
-            card.push(<Card text={newCard} />);
+            let key = `card${i}`;
+            card.push(<Card text={newCard} key={key} />);
         }
 
         return (
-            <div className="person-list {this.state.highlight}" key={this.props.reactKey}>
+            <div className="person-list {this.state.highlight}">
                 <h2>{this.props.title}</h2>
                 {card}
 

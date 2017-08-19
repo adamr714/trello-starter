@@ -7,7 +7,7 @@ export default function Board(props) {
 
         props.lists.map( (title, index) => {
             let key=`list${index}`;
-            cardLists.push(<CardList title={title} Key={key}/>)
+            cardLists.push(<CardList title={title} key={key}/>)
         });
     return (
         <div>

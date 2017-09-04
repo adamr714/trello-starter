@@ -20,7 +20,7 @@ export default class CardList extends React.Component {
 
     onFormSubmit(e) {
       e.preventDefault();
-      debugger;
+    //   debugger;
       this.setState({cardsText: [...this.state.cardsText, this.refs.myInput.value]});
 
       

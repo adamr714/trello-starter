@@ -16,6 +16,7 @@
             ],
             "internalConsoleOptions": "openOnSessionStart"
         },
+        
         {
             "type": "chrome",
             "request": "launch",
